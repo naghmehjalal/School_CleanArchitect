@@ -1,4 +1,4 @@
-# school online system 
+# Online school  system 
 
 A simple website created with **ASP. Net Core 7**, **C#** and **MS SQL Server** allow members to download  courses online.
 
