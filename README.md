@@ -36,6 +36,8 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
 >> Connection string defined in ```Web.API/appsettings.json```
 
 
+
+
 1. Install NuGet Package
    
 	Infrastructure.Identity
@@ -66,16 +68,22 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
 	  **Microsoft.EntityFrameworkCore.SqlServer**
 	  **Microsoft.EntityFrameworkCore.Tools**
 
-3. Create ```AppContext```
+2. Update   class  UserConfiguration in  (Infrastructure.Identity/Configurations/UserConfiguration)
+    UserName , PasswordHash , Email
+   
+3.  Update  Group and Subgroup
+  > ```AppContext.cs.``` in Infrastructure.Persistence
+  > region  ```Seed Course```
+  
+
 4. Create Migrations
-	```Add-Migration -Name "AppContext" ```
-5. Run the Migrations
+	```Add-Migration -Name "AppContext"
+ 
+5. Run the Migrations```
 	```Update-Database```
 
-7. Create Migrations
+6. Create Migrations
 	```Add-Migration -Name "IdentityDbContext" 
 
-8. Run the Migrations
+7. Run the Migrations
 	```Update-Database```
-
-
