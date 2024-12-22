@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>وبسایت دوره های اموزشی</title>
+	<partial name="_MetaTags" />
+	<!-- Favicon -->
+	<link href="~/img/favicon.ico" rel="shortcut icon" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	
+	<partial name="_Styles" />
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<partial name="_Header" />
+	<!-- Header section end -->
+	<!-- Page info -->
+	<div class="page-info-section set-bg" data-setbg="/img/page-bg/4.jpg">
+		<div class="container">
+			<div class="site-breadcrumb">
+				<span>بلاگ </span>
+				<a href="#">خانه </a>
+			</div>
+		</div>
+	</div>
+	<!-- Page info end -->
+	
+	<!-- Page -->
+	@RenderBody()
+	<!-- Page end -->
+
+	<!-- banner section -->
+	<partial name="_Banner" />
+	<!-- banner section end -->
+
+	<!-- footer section -->
+	<partial name="_Footer" />
+	<!-- footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="~/js/jquery-3.2.1.min.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/mixitup.min.js"></script>
+	<script src="~/js/circle-progress.min.js"></script>
+	<script src="~/js/owl.carousel.min.js"></script>
+	<script src="~/js/main.js"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

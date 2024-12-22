@@ -1,0 +1,70 @@
+﻿@using WebApp.Models.CourseViewModels.CourseGroupViewModel;
+
+
+@model IEnumerable<CourseGroupVM>
+
+@* @{
+    ViewData["Title"] = "گروه ها";
+} *@
+<main>
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <section class="user-account-content">
+                        <header>
+                            <h1> @ViewData["Title"] </h1>
+                        </header>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>عنوان گروه</th>
+                                    @*  <th>وضعیت</th> *@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Where(g => g.ParentId == null))
+                                {
+                                    <tr>
+                                        <td class="collapsible-section-header">
+                                            <a data-toggle="collapse" href="#collapse_section_one"> @item.GroupTitle</a>
+                                        </td>
+
+                                        @*  <td>
+                                    <a asp-action="CourseGroup" asp-action="DeleteGroup" asp-route-groupId=@item.GroupId>حذف </a>
+                                    <a asp-controller="CourseGroup" asp-action="EditGroup" asp-route-groupId=@item.GroupId>ویرایش</a>
+                                    </td> *@
+                                    </tr>
+                                    @if (Model.Any(g => g.ParentId == item.GroupId))
+                                    {
+                                        <tr>
+                                            <td class="no-padding" colspan="2">
+                                                <div id="collapse_section_one" class="collapse in">
+                                                    <table style="width:100%">
+                                                        @foreach (var sub in Model.Where(g => g.ParentId == item.GroupId))
+                                                        {
+                                                            <tr>
+                                                                <td>
+                                                                    @sub.GroupTitle
+                                                                </td>
+                                                                <td>
+                                                                    <a asp-controller="CourseGroup" asp-action="DeleteGroup" asp-route-groupId=@sub.GroupId>حذف </a>
+                                                                    <a asp-controller="CourseGroup" asp-action="EditGroup" asp-route-groupId=@sub.GroupId>ویرایش</a>
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

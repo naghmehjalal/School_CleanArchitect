@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+		<PackageReference Include="MediatR" Version="12.0.1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+		<PackageReference Include="System.Drawing.Common" Version="8.0.7" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="CQRS\CQRS_Course\CourseLevel\Handlers\Commands\" />
+		<Folder Include="CQRS\CQRS_Course\CourseLevel\Requests\Commands\" />
+		<Folder Include="CQRS\CQRS_Course\CourseStatus\Handlers\Commands\" />
+		<Folder Include="CQRS\CQRS_Course\CourseStatus\Requests\Commands\" />
+		<Folder Include="CQRS\CQRS_Order\" />
+		<Folder Include="CQRS\Template\Handlers\Commands\" />
+		<Folder Include="CQRS\Template\Handlers\Queries\" />
+		<Folder Include="CQRS\Template\Requests\Commands\" />
+		<Folder Include="CQRS\Template\Requests\Queries\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Infrastructure.Identity">
+			<HintPath>..\Infrastructure.Identity\bin\Debug\net7.0\Infrastructure.Identity.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Core.Domain">
+			<HintPath>..\Core.Domain\bin\Debug\net7.0\Core.Domain.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+</Project>

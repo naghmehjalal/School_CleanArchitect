@@ -1,0 +1,89 @@
+﻿
+/*-------------------------------------------------------------------------*/
+/*---------------https://codepen.io/jasonmccuen/pen/zoQxJx --------------*/
+/*-------------------------------------------------------------------------*/
+
+/* Utilities */
+.no-padding {
+    padding: 0 !important;
+}
+
+/* width */
+/*  .container {
+        width: 1080px;
+    } */
+/* Table Heading */
+.pricing-top-heading th {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 33%;
+}
+
+.pricing-bottom-heading th {
+    padding: 0 2%;
+    font-weight: 300;
+}
+
+.pricing-top-heading .free {
+    border: 1px solid;
+}
+
+.pricing-bottom-heading .free {
+    border: 1px solid;
+}
+
+.pricing-top-heading .basic {
+    border: 1px solid;
+}
+
+.pricing-bottom-heading .basic {
+    border: 1px solid;
+}
+
+.pricing-top-heading .pro {
+    border: 1px solid;
+}
+
+.pricing-bottom-heading .pro {
+    border: 1px solid;
+}
+
+.pricing-top-heading,
+.pricing-bottom-heading {
+    color: white;
+    height: 90px;
+}
+
+table thead th {
+    border: 0;
+}
+
+/* table */
+}
+
+.collapsible-section-header {
+    /*  background-color: $primary-grey; */
+}
+
+    .collapsible-section-header a {
+        /* color: $primary-colour; */
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+        .collapsible-section-header a:after {
+            content: '\25bc';
+            padding-left: 0.5em;
+        }
+
+        .collapsible-section-header a.collapsed:after {
+            content: '\25ba';
+            padding-left: 0.5em;
+        }
+
+tbody td {
+    /*    background-color: $secondary-grey; */
+    border: 1px solid;
+    padding: 1.25rem;
+}
