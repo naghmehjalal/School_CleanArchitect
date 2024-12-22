@@ -7,7 +7,7 @@ A simple website created with **ASP. Net Core 7**, **C#** and **MS SQL Server** 
 * Bootstrap 5
 * ASP.NET Core 7
 * C#
-* MS SQL Server 2014, Entity Framework Core
+* MS SQL Server 2022, Entity Framework Core
 * Web API
 
   
@@ -19,11 +19,63 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
  ## Swagger (Swashbuckle)
 
  1. Install NuGet Package 
-	**Swashbuckle.AspNetCore 6.5.0**
-	**NSwag.AspNetCore 14.2.0**
-  **MediatR 12.0.1**
-  **Microsoft.AspNetCore.Authentication.JwtBearer**
+  **Swashbuckle.AspNetCore 6.5.0**
+  
 
+## JWT Bearer     
+1. Install NuGet Package 
+	**Microsoft.AspNetCore.Authentication.JwtBearer**
+
+2. Add Configuration into ```appsetting.json```
+- JwtSettings : Key
+- JwtSettings: Issuer
+- JwtSettings: Audience
+- JwtSettings: DurationInMinutes
     
->> Connection string defined in ```Web.API/appsettings.json```	
+
+>> Connection string defined in ```Web.API/appsettings.json```
+
+
+1. Install NuGet Package
+   
+	Infrastructure.Identity
+	**MediatR**
+	**MediatR.Extensions.Microsoft.DependencyInjection**
+        **AutoMapper.Extensions.Microsoft.DependencyInjection**
+        **Microsoft.AspNetCore.Identity**
+        **FluentValidation.DependencyInjectionExtensions**
+        **Microsoft.AspNetCore.Authentication.JwtBearer**
+        **Newtonsoft.Json**
+        **System.IdentityModel.Tokens.Jwt**
+   
+	Core.Application
+	**MediatR**
+	**MediatR.Extensions.Microsoft.DependencyInjection**
+        **AutoMapper.Extensions.Microsoft.DependencyInjection**
+        **Microsoft.AspNetCore.Identity**
+        **FluentValidation.DependencyInjectionExtensions**
+	**Microsoft.AspNetCore.Identity**
+	**Microsoft.AspNetCore.Identity.EntityFrameworkCore**
+
+	Web.api
+	  **Swashbuckle.AspNetCore 6.5.0**
+	  **NSwag.AspNetCore 14.2.0**
+	  **MediatR 12.0.1**
+	  **Microsoft.AspNetCore.Authentication.JwtBearer**
+	  **Microsoft.IdentityModel.Tokens**
+	  **Microsoft.EntityFrameworkCore.SqlServer**
+	  **Microsoft.EntityFrameworkCore.Tools**
+
+3. Create ```AppContext```
+4. Create Migrations
+	```Add-Migration -Name "AppContext" ```
+5. Run the Migrations
+	```Update-Database```
+
+7. Create Migrations
+	```Add-Migration -Name "IdentityDbContext" 
+
+8. Run the Migrations
+	```Update-Database```
+
 
