@@ -4,7 +4,7 @@ A simple website created with **ASP. Net Core 7**, **C#** and **MS SQL Server** 
 
 
 ### Technologies
-* Bootstrap 5
+
 * ASP.NET Core 7
 * C#
 * MS SQL Server 2022, Entity Framework Core
