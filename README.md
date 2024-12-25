@@ -41,6 +41,7 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
 1. Install NuGet Package
    
 	Infrastructure.Identity
+
 	**MediatR**
 	**MediatR.Extensions.Microsoft.DependencyInjection**
         **AutoMapper.Extensions.Microsoft.DependencyInjection**
@@ -51,6 +52,7 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
         **System.IdentityModel.Tokens.Jwt**
    
 	Core.Application
+
 	**MediatR**
 	**MediatR.Extensions.Microsoft.DependencyInjection**
         **AutoMapper.Extensions.Microsoft.DependencyInjection**
@@ -60,6 +62,7 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
 	**Microsoft.AspNetCore.Identity.EntityFrameworkCore**
 
 	Web.api
+
 	  **Swashbuckle.AspNetCore 6.5.0**
 	  **NSwag.AspNetCore 14.2.0**
 	  **MediatR 12.0.1**
@@ -68,10 +71,10 @@ https://github.com/naghmehjalal/School_CleanArchitect/blob/main/Project%20Struct
 	  **Microsoft.EntityFrameworkCore.SqlServer**
 	  **Microsoft.EntityFrameworkCore.Tools**
 
-2. Update   class  UserConfiguration in  (Infrastructure.Identity/Configurations/UserConfiguration)
+3. Update   class  UserConfiguration in  (Infrastructure.Identity/Configurations/UserConfiguration)
     UserName , PasswordHash , Email
    
-3.  Update  Group and Subgroup
+4.  Update  Group and Subgroup
   > ```AppContext.cs.``` in Infrastructure.Persistence
   > region  ```Seed Course```
   
